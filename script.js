@@ -1,4 +1,4 @@
- const translations = {
+  const translations = {
       en: {
         title: "🌤️ Zino Weather Forecast",
         checkWeather: "Check Weather",
@@ -169,7 +169,7 @@ function formatDate(date, lang) {
         const iconUrl = `https://openweathermap.org/img/wn/${today.weather[0].icon}@4x.png`;
         document.getElementById("cityImage").src = iconUrl;
 
-        
+        getCityImage(city);
 
         let forecastHTML = "";
         const daily = data.list.filter((item, index) => index % 8 === 0);
@@ -199,7 +199,18 @@ function formatDate(date, lang) {
       }
     }
 
-   
+    async function getCityImage(city) {
+      try {
+        const res = await fetch(
+          `https://api.unsplash.com/photos/random?query=${city}&client_id=${unsplashApiKey}`
+        );
+        const data = await res.json();
+        const imageUrl = data.urls.regular;
+        document.getElementById("cityImage").src = imageUrl;
+      } catch (error) {
+        console.error("Error fetching city image:", error);
+      }
+    }
 
     const toggleButton = document.getElementById('toggle-theme');
 const body = document.body;
