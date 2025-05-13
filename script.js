@@ -1,4 +1,4 @@
-  const translations = {
+const translations = {
       en: {
         title: "🌤️ Zino Weather Forecast",
         checkWeather: "Check Weather",
