@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌤️ Zino Weather Forecast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+  <div class="theme-toggle">
+    <button id="toggle-theme" aria-label="Toggle Theme">🌙</button>
+  </div>
+</header>
+
+  <div class="container">
+    <h1 id="title">🌤️ Zino Weather Forecast</h1>
+    <select id="languageSelect" onchange="changeLanguage()">
+  <option value="en">English</option>
+  <option value="fr">Français</option>
+        <option value="ig">Igbo</option>
+      <option value="yo">Yoruba</option>
+      <option value="ha">Hausa</option>
+      <option value="ik">Ikwerre</option>
+</select>
+
+    <!-- Dropdown for Nigerian cities -->
+    <select id="citySelect">
+      <option value="Select a city">Select a city</option>
+      <option value="Abuja">Abuja</option>
+      <option value="Lagos">Lagos</option>
+      <option value="Port Harcourt">Port Harcourt</option>
+      <option value="Kano">Kano</option>
+      <option value="Kaduna">Kaduna</option>
+      <option value="Benin City">Benin City</option>
+      <option value="Maiduguri">Maiduguri</option>
+      <option value="Jos">Jos</option>
+      <option value="Ogun">Ogun</option>
+      <option value="Rivers">Rivers</option>
+      <option value="Enugu">Enugu</option>
+      <option value="Owerri">Owerri</option>
+      <option value="Uyo">Uyo</option>
+      <option value="Calabar">Calabar</option>
+      <option value="Abia">Abia</option>
+      <option value="Ekiti">Ekiti</option>
+      <option value="Edo">Edo</option>
+      <option value="Osogbo">Osogbo</option>
+      <option value="Ibadan">Ibadan</option>
+      <option value="Akure">Akure</option>
+      <option value="Ilorin">Ilorin</option>
+      <option value="Zaria">Zaria</option>
+      <option value="Sokoto">Sokoto</option>
+      <option value="Katsina">Katsina</option>
+      <option value="Gombe">Gombe</option>
+      <option value="Yola">Yola</option>
+      <option value="Aba">Aba</option>
+      <option value="Lokoja">Lokoja</option>
+      <option value="Minna">Minna</option>
+      <option value="Abeokuta">Abeokuta</option>
+      <option value="Makurdi">Makurdi</option>
+      <option value="Asaba">Asaba</option>
+      <option value="Dutse">Dutse</option>
+      <option value="Ikorodu">Ikorodu</option>
+      <option value="Oyo">Oyo</option>
+      <option value="Bauchi">Bauchi</option>
+      <option value="Yenagoa">Yenagoa</option>
+      <option value="Ikot Ekpene">Ikot Ekpene</option>
+      <option value="Kano City">Kano City</option>
+    </select>
+    <button id="checkWeather" onclick="getWeather()">Check Weather</button>
+
+    <div id="loading" class="hidden">
+      <div class="sun-loader"></div>
+      <p id="loadingText">Loading...</p>
+    </div>
+
+    <div id="offline" class="hidden">You're offline. Please check your connection.</div>
+    <div id="rainAlert"></div>
+
+    <div id="cityInfo">
+      <h2 id="cityName"></h2>
+      <p id="temperature"></p>
+      <p id="description"></p>
+      <img id="cityImage" alt="City view" />
+    </div>
+
+    <div id="forecastContainer"></div>
+
+    <div id="highlights">
+      <h2 id="todaysHighlights">🌟 Today's Highlights</h2>
+      <div class="highlight" id="pressure"></div>
+      <div class="highlight" id="wind"></div>
+      <div class="highlight" id="seaLevel"></div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
