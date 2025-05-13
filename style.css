@@ -1,8 +1,4 @@
-/* Reset & iOS text zoom fix */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-* {
+  * {
       box-sizing: border-box;
     }
 
@@ -16,15 +12,11 @@
       align-items: center;
       min-height: 100vh;
       padding: 20px;
-       overflow-x: hidden;
     }
 
-
-
-
-       .container {
+    .container {
       width: 100%;
-      max-width: 100%;
+      max-width: 960px;
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
       border-radius: 20px;
@@ -217,11 +209,8 @@ body {
 /* Top right toggle button */
 .theme-toggle {
   position: fixed;
-  top: 20px;
-  right:20px;
-  z-index: 9999; /* ensure it's on top */
-  font-size: 2rem; /* increase size */
-  cursor: pointer;
+  top: 1rem;
+  right: 1rem;
 }
 
 #toggle-theme {
@@ -230,25 +219,4 @@ body {
   border: none;
   cursor: pointer;
   color: var(--text-color);
-}
-.card {
-  width: 90%;
-  max-width: 400rem;
-}
-
-@media screen and (max-width: 768px) {
-  .forecast-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .forecast-card img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .card {
-    padding: 1.2rem;
-  }
 }
