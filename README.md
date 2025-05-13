@@ -29,5 +29,5 @@ This is a sleek and responsive weather forecast web application that displays cu
 1. Clone the repository:
 
    bash
-   git clone https://github.com//weather-forecast-app.git
+   git clone https://github.com/BoluOladipo/weather-forecast-app.git
    cd weather-forecast-app
