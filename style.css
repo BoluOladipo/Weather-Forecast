@@ -38,7 +38,7 @@
       border: none;
       font-size: 1rem;
       outline: none;
-      width: 60%;
+      width: 60vw;
       max-width: 300px;
       background-color: black;
       color: #fff;
@@ -62,8 +62,8 @@
     }
 
     #cityImage {
-      width: 470px;
-      height: 190px;
+      width: 470vw;
+      height: 190vh;
       object-fit: cover;
       border-radius: 15px;
       margin-top: 15px;
@@ -71,8 +71,8 @@
     }
 
     .sun-loader {
-      width: 60px;
-      height: 60px;
+      width: 60vw;
+      height: 60vh;
       border: 6px solid rgba(255, 204, 0, 0.4);
       border-top: 6px solid #ffcc00;
       border-radius: 50%;
@@ -119,8 +119,8 @@
     }
 
     .forecast-icon {
-      width: 180px;
-      height: 100px;
+      width: 180vw;
+      height: 100vh;
       display: block;
       margin: 0 auto 10px;
     }
@@ -130,7 +130,7 @@
       margin: 10px auto;
       padding: 15px;
       border-radius: 12px;
-      max-width: 300px;
+      max-width: 300vw;
     }
 
     #loading {
@@ -159,7 +159,7 @@
       display: none;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 600vw) {
       select {
         width: 100%;
       }
